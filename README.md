@@ -5,7 +5,7 @@
 > **TL;DR**: Snippix lets you capture reusable code, tag it, and paste it anywhere—without leaving the keyboard.
 
 <p align="center">
-  <a href="snippix.zayeef.dev">Demo</a> ·
+  <a href="https://snippix.zayeef.dev">Demo</a> ·
   <a href="#-features">Features</a> ·
   <a href="#-tech-stack">Tech Stack</a> ·
   <a href="#-getting-started">Getting Started</a> ·
