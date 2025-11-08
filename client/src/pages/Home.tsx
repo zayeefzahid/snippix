@@ -129,12 +129,12 @@ export default function Home() {
         <p>
           Made with ❤️ by{" "}
           <a
-            href="https://github.com/aayushbharti"
+            href="https://github.com/zayeefzahid"
             target="_blank"
             rel="noopener noreferrer"
             className="text-blue-400 hover:underline"
           >
-            Aayush Bharti
+            Zayeef Zahid
           </a>
           {" • "}
           Adapted for Cloudflare Pages by{" "}
