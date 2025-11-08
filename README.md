@@ -283,7 +283,7 @@ MIT © 2025 Zayeef Zahid
 * Keep screenshots and the API section current so people can try it quick.
 
 <p align="center">
-  <img src="./client/public/preview.png" alt="Snippix preview" width="900"/>
+  <img src="./preview.png" alt="Snippix preview" width="900"/>
   <br/>
   <em>Keyboard‑first snippet manager — light & dark themes</em>
 </p>
