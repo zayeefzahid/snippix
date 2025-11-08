@@ -18,15 +18,8 @@
 ## 🎥 Demo
 
 <p align="center">
-  <img src="./client/public/demo.gif" alt="Snippix animated demo" width="900"/>
+  <img src="./preview.png" alt="Snippix demo" width="900"/>
 </p>
-
-> Tip: If GIFs are large, consider an MP4 for smoother playback.
-
-```
-./client/public/preview.png   # static banner used above
-./client/public/demo.gif      # animated walkthrough (record with ScreenToGif/Kap)
-```
 
 ---
 
@@ -40,13 +33,10 @@
 * **Accounts** (optional): sign in, private snippets, share links.
 * **Dark mode** out of the box.
 
-> *Adjust this list to match your current feature set.*
-
 ---
 
 ## 🧱 Tech Stack
 
-> This reflects the current repo layout and files. Update if you change tooling.
 
 * **Language:** TypeScript
 * **Package manager:** pnpm
