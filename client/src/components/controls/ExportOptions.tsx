@@ -17,7 +17,7 @@ interface ExportOptionsProps {
 }
 
 export default function ExportOptions({ targetRef }: ExportOptionsProps) {
-  const title = usePreferencesStore((state) => state.title);
+  const title = usePreferencesStore(state => state.title);
 
   const copyImage = async () => {
     if (!targetRef.current) return;
@@ -106,22 +106,22 @@ export default function ExportOptions({ targetRef }: ExportOptionsProps) {
   };
 
   // Keyboard shortcuts
-  useHotkeys("ctrl+c, cmd+c", (e) => {
+  useHotkeys("ctrl+c, cmd+c", e => {
     e.preventDefault();
     copyImage();
   });
 
-  useHotkeys("shift+ctrl+c, shift+cmd+c", (e) => {
+  useHotkeys("shift+ctrl+c, shift+cmd+c", e => {
     e.preventDefault();
     copyLink();
   });
 
-  useHotkeys("ctrl+s, cmd+s", (e) => {
+  useHotkeys("ctrl+s, cmd+s", e => {
     e.preventDefault();
     saveImage("PNG");
   });
 
-  useHotkeys("shift+ctrl+s, shift+cmd+s", (e) => {
+  useHotkeys("shift+ctrl+s, shift+cmd+s", e => {
     e.preventDefault();
     saveImage("SVG");
   });
@@ -129,13 +129,17 @@ export default function ExportOptions({ targetRef }: ExportOptionsProps) {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button type="button">
+        <Button
+          type="button"
+          size="lg"
+          className="w-full shadow-lg shadow-primary/20"
+        >
           <Share2 className="w-4 h-4 mr-2" />
           Export
         </Button>
       </DropdownMenuTrigger>
 
-      <DropdownMenuContent className="w-48">
+      <DropdownMenuContent className="w-56">
         <DropdownMenuItem className="gap-2 cursor-pointer" onClick={copyImage}>
           <Image className="w-4 h-4" />
           Copy Image

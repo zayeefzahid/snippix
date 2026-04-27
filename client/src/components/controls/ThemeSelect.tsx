@@ -7,10 +7,11 @@ import {
 } from "@/components/ui/select";
 import { usePreferencesStore } from "@/stores/usePreferencesStore";
 import { themes } from "@/lib/options";
+import ControlField from "./ControlField";
 
 export default function ThemeSelect() {
-  const theme = usePreferencesStore((state) => state.theme);
-  const setTheme = usePreferencesStore((state) => state.setTheme);
+  const theme = usePreferencesStore(state => state.theme);
+  const setTheme = usePreferencesStore(state => state.setTheme);
 
   const themeNames: Record<string, string> = {
     hyper: "Hyper",
@@ -26,20 +27,19 @@ export default function ThemeSelect() {
   };
 
   return (
-    <div>
-      <label className="block mb-2 text-xs font-medium">Theme</label>
+    <ControlField label="Theme">
       <Select value={theme} onValueChange={setTheme}>
-        <SelectTrigger className="w-40">
+        <SelectTrigger className="w-full min-w-40">
           <SelectValue />
         </SelectTrigger>
         <SelectContent>
-          {Object.keys(themes).map((key) => (
+          {Object.keys(themes).map(key => (
             <SelectItem key={key} value={key}>
               {themeNames[key] || key.charAt(0).toUpperCase() + key.slice(1)}
             </SelectItem>
           ))}
         </SelectContent>
       </Select>
-    </div>
+    </ControlField>
   );
 }

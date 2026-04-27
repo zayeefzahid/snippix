@@ -1,21 +1,21 @@
 import { Input } from "@/components/ui/input";
 import { usePreferencesStore } from "@/stores/usePreferencesStore";
+import ControlField from "./ControlField";
 
 export default function FontSizeInput() {
-  const fontSize = usePreferencesStore((state) => state.fontSize);
-  const setFontSize = usePreferencesStore((state) => state.setFontSize);
+  const fontSize = usePreferencesStore(state => state.fontSize);
+  const setFontSize = usePreferencesStore(state => state.setFontSize);
 
   return (
-    <div>
-      <label className="block mb-2 text-xs font-medium">Font Size</label>
+    <ControlField label="Size">
       <Input
         type="number"
         min={12}
         max={32}
         value={fontSize}
-        onChange={(e) => setFontSize(Number(e.target.value))}
-        className="w-20"
+        onChange={e => setFontSize(Number(e.target.value))}
+        className="w-24"
       />
-    </div>
+    </ControlField>
   );
 }

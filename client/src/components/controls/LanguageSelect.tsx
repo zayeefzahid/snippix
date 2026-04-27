@@ -7,12 +7,13 @@ import {
 } from "@/components/ui/select";
 import { usePreferencesStore } from "@/stores/usePreferencesStore";
 import { languages } from "@/lib/options";
+import ControlField from "./ControlField";
 
 export default function LanguageSelect() {
-  const language = usePreferencesStore((state) => state.language);
-  const setLanguage = usePreferencesStore((state) => state.setLanguage);
+  const language = usePreferencesStore(state => state.language);
+  const setLanguage = usePreferencesStore(state => state.setLanguage);
   const setAutoDetectLanguage = usePreferencesStore(
-    (state) => state.setAutoDetectLanguage
+    state => state.setAutoDetectLanguage
   );
 
   const handleLanguageChange = (value: string) => {
@@ -21,10 +22,9 @@ export default function LanguageSelect() {
   };
 
   return (
-    <div>
-      <label className="block mb-2 text-xs font-medium">Language</label>
+    <ControlField label="Language">
       <Select value={language} onValueChange={handleLanguageChange}>
-        <SelectTrigger className="w-40">
+        <SelectTrigger className="w-full min-w-40">
           <SelectValue />
         </SelectTrigger>
         <SelectContent>
@@ -36,6 +36,6 @@ export default function LanguageSelect() {
           ))}
         </SelectContent>
       </Select>
-    </div>
+    </ControlField>
   );
 }

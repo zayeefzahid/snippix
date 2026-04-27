@@ -7,16 +7,16 @@ import {
 } from "@/components/ui/select";
 import { usePreferencesStore } from "@/stores/usePreferencesStore";
 import { fonts } from "@/lib/options";
+import ControlField from "./ControlField";
 
 export default function FontSelect() {
-  const fontStyle = usePreferencesStore((state) => state.fontStyle);
-  const setFontStyle = usePreferencesStore((state) => state.setFontStyle);
+  const fontStyle = usePreferencesStore(state => state.fontStyle);
+  const setFontStyle = usePreferencesStore(state => state.setFontStyle);
 
   return (
-    <div>
-      <label className="block mb-2 text-xs font-medium">Font</label>
+    <ControlField label="Font">
       <Select value={fontStyle} onValueChange={setFontStyle}>
-        <SelectTrigger className="w-40">
+        <SelectTrigger className="w-full min-w-40">
           <SelectValue />
         </SelectTrigger>
         <SelectContent>
@@ -27,6 +27,6 @@ export default function FontSelect() {
           ))}
         </SelectContent>
       </Select>
-    </div>
+    </ControlField>
   );
 }

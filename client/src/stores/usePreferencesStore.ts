@@ -23,8 +23,8 @@ interface PreferencesState {
   setPadding: (padding: number) => void;
 }
 
-export const usePreferencesStore = create<PreferencesState>((set) => ({
-  code: "// Welcome to Snippix!\n// Create beautiful code screenshots\n\nfunction greet(name) {\n  console.log(`Hello, ${name}!`);\n}\n\ngreet(\"World\");",
+export const usePreferencesStore = create<PreferencesState>(set => ({
+  code: '// Welcome to Snippix!\n// Create beautiful code screenshots\n\nfunction greet(name) {\n  console.log(`Hello, ${name}!`);\n}\n\ngreet("World");',
   title: "Untitled",
   theme: "hyper",
   darkMode: true,
@@ -32,16 +32,16 @@ export const usePreferencesStore = create<PreferencesState>((set) => ({
   language: "auto",
   autoDetectLanguage: true,
   fontSize: 18,
-  fontStyle: "jetbrains-mono",
+  fontStyle: "jetBrainsMono",
   padding: 64,
-  setCode: (code) => set({ code }),
-  setTitle: (title) => set({ title }),
-  setTheme: (theme) => set({ theme }),
-  setDarkMode: (darkMode) => set({ darkMode }),
-  setShowBackground: (showBackground) => set({ showBackground }),
-  setLanguage: (language) => set({ language }),
-  setAutoDetectLanguage: (autoDetectLanguage) => set({ autoDetectLanguage }),
-  setFontSize: (fontSize) => set({ fontSize }),
-  setFontStyle: (fontStyle) => set({ fontStyle }),
-  setPadding: (padding) => set({ padding }),
+  setCode: code => set({ code }),
+  setTitle: title => set({ title }),
+  setTheme: theme => set({ theme }),
+  setDarkMode: darkMode => set({ darkMode }),
+  setShowBackground: showBackground => set({ showBackground }),
+  setLanguage: language => set({ language }),
+  setAutoDetectLanguage: autoDetectLanguage => set({ autoDetectLanguage }),
+  setFontSize: fontSize => set({ fontSize }),
+  setFontStyle: fontStyle => set({ fontStyle }),
+  setPadding: padding => set({ padding }),
 }));
