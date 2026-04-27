@@ -119,7 +119,7 @@ export default function Home() {
       </header>
 
       <section className="container relative z-10 grid min-h-[calc(100vh-3rem)] min-w-0 items-center gap-8 py-8 lg:grid-cols-[0.82fr_1.18fr] lg:py-12">
-        <div className="min-w-0 max-w-[22rem] sm:max-w-2xl">
+        <div className="min-w-0 max-w-[22rem] sm:max-w-2xl lg:pb-8">
           <div className="mb-5 inline-flex w-full max-w-[22rem] items-start gap-2 rounded-lg border border-cyan-200/16 bg-cyan-200/[0.055] px-3 py-1.5 text-sm leading-6 text-cyan-50 sm:w-auto sm:max-w-full">
             <Zap
               className="mt-1 size-4 shrink-0 text-cyan-200"
@@ -127,12 +127,13 @@ export default function Home() {
             />
             <span>Design-ready code images without a design tool</span>
           </div>
-          <h1 className="text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-6xl">
-            Snippix
+          <h1 className="max-w-2xl text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-6xl">
+            Beautiful code screenshots, ready to share.
           </h1>
           <p className="mt-5 max-w-[22rem] text-base leading-7 text-zinc-300 sm:max-w-xl sm:text-lg">
-            Create polished code screenshots with carefully tuned themes,
-            typography, padding, backgrounds, and one-click PNG or SVG export.
+            Snippix turns snippets into polished visuals with carefully tuned
+            themes, typography, padding, backgrounds, and one-click PNG or SVG
+            export.
           </p>
           <div className="mt-7 flex flex-col gap-3 sm:flex-row">
             <Button size="lg" asChild>
@@ -197,7 +198,7 @@ export default function Home() {
           </div>
 
           <div className="mb-4 grid grid-cols-3 gap-2 text-xs text-muted-foreground">
-            <div className="rounded-lg border border-white/10 bg-white/[0.04] px-3 py-2">
+            <div className="rounded-lg border border-white/10 bg-white/[0.04] px-3 py-2 transition-colors hover:border-cyan-200/20 hover:bg-white/[0.06]">
               <Palette
                 className="mb-1 size-3.5 text-cyan-200"
                 aria-hidden="true"
@@ -205,11 +206,11 @@ export default function Home() {
               <span className="block text-white">Theme</span>
               <span>Editable</span>
             </div>
-            <div className="rounded-lg border border-white/10 bg-white/[0.04] px-3 py-2">
+            <div className="rounded-lg border border-white/10 bg-white/[0.04] px-3 py-2 transition-colors hover:border-cyan-200/20 hover:bg-white/[0.06]">
               <span className="block text-white">Canvas</span>
               <span>Retina 2x</span>
             </div>
-            <div className="rounded-lg border border-white/10 bg-white/[0.04] px-3 py-2">
+            <div className="rounded-lg border border-white/10 bg-white/[0.04] px-3 py-2 transition-colors hover:border-cyan-200/20 hover:bg-white/[0.06]">
               <span className="block text-white">Share</span>
               <span>Linkable</span>
             </div>
