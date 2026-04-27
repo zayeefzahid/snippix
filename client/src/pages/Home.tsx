@@ -69,17 +69,17 @@ export default function Home() {
         crossOrigin="anonymous"
       />
 
-      <header className="sticky top-0 z-40 border-b border-white/10 bg-[#080b12]/88 backdrop-blur-md">
+      <header className="sticky top-0 z-40 border-b border-white/10 bg-[#070a10]/90 backdrop-blur-md">
         <nav
-          className="container flex h-16 min-w-0 items-center justify-between gap-3"
+          className="container flex h-16 min-w-0 items-center justify-between gap-4"
           aria-label="Primary navigation"
         >
           <a href="/" className="flex min-w-0 items-center gap-3">
-            <span className="grid size-9 place-items-center rounded-lg border border-cyan-200/20 bg-cyan-300/10 shadow-lg shadow-cyan-950/30">
+            <span className="grid size-9 place-items-center rounded-lg border border-cyan-200/20 bg-cyan-300/10 shadow-lg shadow-cyan-950/30 transition-colors hover:border-cyan-200/35 hover:bg-cyan-300/15">
               <Sparkles className="size-4 text-cyan-200" aria-hidden="true" />
             </span>
             <span>
-              <span className="block text-base font-semibold tracking-tight">
+              <span className="block text-base font-semibold tracking-normal">
                 Snippix
               </span>
               <span className="hidden text-xs text-muted-foreground sm:block">
@@ -91,7 +91,7 @@ export default function Home() {
           <div className="hidden items-center gap-1 rounded-lg border border-white/10 bg-white/[0.035] p-1 text-sm text-muted-foreground md:flex">
             <a
               href="#composer"
-              className="rounded-md px-3 py-1.5 transition-colors hover:bg-white/[0.06] hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/70"
+              className="rounded-md bg-white/[0.065] px-3 py-1.5 text-white shadow-sm shadow-black/10 transition-colors hover:bg-white/[0.09] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/70"
             >
               Editor
             </a>
@@ -118,7 +118,7 @@ export default function Home() {
         </nav>
       </header>
 
-      <section className="container relative z-10 grid min-h-[calc(100vh-3rem)] min-w-0 items-center gap-8 py-8 lg:grid-cols-[0.82fr_1.18fr] lg:py-12">
+      <section className="container relative z-10 grid min-h-[calc(100vh-4rem)] min-w-0 items-center gap-10 py-10 lg:grid-cols-[0.82fr_1.18fr] lg:gap-12 lg:py-16">
         <div className="min-w-0 max-w-[22rem] sm:max-w-2xl lg:pb-8">
           <div className="mb-5 inline-flex w-full max-w-[22rem] items-start gap-2 rounded-lg border border-cyan-200/16 bg-cyan-200/[0.055] px-3 py-1.5 text-sm leading-6 text-cyan-50 sm:w-auto sm:max-w-full">
             <Zap
@@ -127,15 +127,15 @@ export default function Home() {
             />
             <span>Design-ready code images without a design tool</span>
           </div>
-          <h1 className="max-w-2xl text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-6xl">
+          <h1 className="max-w-2xl text-4xl font-semibold tracking-normal text-white sm:text-5xl lg:text-6xl">
             Beautiful code screenshots, ready to share.
           </h1>
-          <p className="mt-5 max-w-[22rem] text-base leading-7 text-zinc-300 sm:max-w-xl sm:text-lg">
+          <p className="mt-6 max-w-[22rem] text-base leading-7 text-zinc-300 sm:max-w-xl sm:text-lg">
             Snippix turns snippets into polished visuals with carefully tuned
             themes, typography, padding, backgrounds, and one-click PNG or SVG
             export.
           </p>
-          <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Button size="lg" asChild>
               <a href="#composer">
                 Start composing
@@ -149,16 +149,16 @@ export default function Home() {
               </a>
             </Button>
           </div>
-          <dl className="mt-8 grid max-w-[22rem] grid-cols-1 gap-3 text-sm sm:max-w-xl sm:grid-cols-3">
-            <div className="rounded-lg border border-white/10 bg-white/[0.045] p-4 shadow-sm shadow-black/10 transition-colors hover:border-cyan-200/20">
+          <dl className="mt-9 grid max-w-[22rem] grid-cols-1 gap-3 text-sm sm:max-w-xl sm:grid-cols-3">
+            <div className="premium-card p-4">
               <dt className="text-muted-foreground">Theme presets</dt>
               <dd className="mt-1 font-semibold text-white">10 presets</dd>
             </div>
-            <div className="rounded-lg border border-white/10 bg-white/[0.045] p-4 shadow-sm shadow-black/10 transition-colors hover:border-cyan-200/20">
+            <div className="premium-card p-4">
               <dt className="text-muted-foreground">Formats</dt>
               <dd className="mt-1 font-semibold text-white">PNG + SVG</dd>
             </div>
-            <div className="rounded-lg border border-white/10 bg-white/[0.045] p-4 shadow-sm shadow-black/10 transition-colors hover:border-cyan-200/20">
+            <div className="premium-card p-4">
               <dt className="text-muted-foreground">Sharing</dt>
               <dd className="mt-1 font-semibold text-white">Copy link</dd>
             </div>
@@ -168,7 +168,7 @@ export default function Home() {
         <section
           id="composer"
           aria-label="Snippet composer preview"
-          className="premium-panel w-full min-w-0 max-w-[22rem] rounded-lg p-3 sm:max-w-full sm:p-4"
+          className="premium-panel w-full min-w-0 max-w-[22rem] rounded-lg p-3 sm:max-w-full sm:p-5"
         >
           <div className="mb-4 flex flex-col gap-3 border-b border-white/10 pb-4 sm:flex-row sm:items-center sm:justify-between">
             <div className="flex items-center gap-3">
@@ -198,7 +198,7 @@ export default function Home() {
           </div>
 
           <div className="mb-4 grid grid-cols-3 gap-2 text-xs text-muted-foreground">
-            <div className="rounded-lg border border-white/10 bg-white/[0.04] px-3 py-2 transition-colors hover:border-cyan-200/20 hover:bg-white/[0.06]">
+            <div className="premium-card px-3 py-2">
               <Palette
                 className="mb-1 size-3.5 text-cyan-200"
                 aria-hidden="true"
@@ -206,17 +206,17 @@ export default function Home() {
               <span className="block text-white">Theme</span>
               <span>Editable</span>
             </div>
-            <div className="rounded-lg border border-white/10 bg-white/[0.04] px-3 py-2 transition-colors hover:border-cyan-200/20 hover:bg-white/[0.06]">
+            <div className="premium-card px-3 py-2">
               <span className="block text-white">Canvas</span>
               <span>Retina 2x</span>
             </div>
-            <div className="rounded-lg border border-white/10 bg-white/[0.04] px-3 py-2 transition-colors hover:border-cyan-200/20 hover:bg-white/[0.06]">
+            <div className="premium-card px-3 py-2">
               <span className="block text-white">Share</span>
               <span>Linkable</span>
             </div>
           </div>
 
-          <div className="flex min-h-[420px] w-full items-center justify-start overflow-auto rounded-lg border border-white/10 bg-[#090d15] p-3 shadow-inner shadow-black/30 sm:justify-center sm:p-5">
+          <div className="flex min-h-[420px] w-full items-center justify-start overflow-auto rounded-lg border border-white/10 bg-[#080c13] p-3 shadow-inner shadow-black/30 sm:justify-center sm:p-6">
             <Resizable
               className="max-w-full"
               enable={{ left: true, right: true }}
@@ -263,7 +263,7 @@ export default function Home() {
 
       <section
         id="controls"
-        className="relative z-10 border-y border-white/10 bg-[#090d15]/84 py-8"
+        className="relative z-10 border-y border-white/10 bg-[#080c13]/92 py-10"
       >
         <div className="container">
           <div className="mb-4 flex flex-col gap-1 sm:flex-row sm:items-end sm:justify-between">
@@ -276,8 +276,8 @@ export default function Home() {
               </p>
             </div>
           </div>
-          <Card className="rounded-lg border-white/10 bg-[#111722] py-0 shadow-2xl shadow-black/25">
-            <CardContent className="grid gap-5 p-5 sm:grid-cols-2 lg:grid-cols-[repeat(3,minmax(0,1fr))_auto_auto] xl:grid-cols-[repeat(7,max-content)] xl:items-end">
+          <Card className="rounded-lg border-white/10 bg-[#101722] py-0 shadow-2xl shadow-black/25">
+            <CardContent className="grid gap-5 p-5 sm:grid-cols-2 sm:p-6 lg:grid-cols-[repeat(3,minmax(0,1fr))_auto_auto] xl:grid-cols-[repeat(7,max-content)] xl:items-end">
               <ThemeSelect />
               <LanguageSelect />
               <FontSelect />

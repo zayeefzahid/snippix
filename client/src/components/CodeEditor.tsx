@@ -66,7 +66,7 @@ export default function CodeEditor() {
       className={cn(
         "overflow-hidden rounded-lg border shadow-2xl transition-all duration-300",
         darkMode
-          ? "border-white/12 bg-[#180815]/88 shadow-black/45"
+          ? "border-white/12 bg-[#170814]/90 shadow-black/45"
           : "border-white/55 bg-white/92 shadow-slate-900/15"
       )}
     >
@@ -96,7 +96,7 @@ export default function CodeEditor() {
               }
             }}
             className={cn(
-              "w-full rounded-md bg-transparent px-2 py-1 text-center text-sm font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/70",
+              "w-full rounded-md bg-transparent px-2 py-1 text-center text-sm font-medium tracking-normal transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/70",
               darkMode
                 ? "text-zinc-300 placeholder:text-zinc-600"
                 : "text-slate-600 placeholder:text-slate-400"
