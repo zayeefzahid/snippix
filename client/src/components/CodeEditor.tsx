@@ -64,22 +64,24 @@ export default function CodeEditor() {
   return (
     <div
       className={cn(
-        "overflow-hidden rounded-lg border shadow-2xl transition-all duration-300",
+        "overflow-hidden rounded-lg border shadow-2xl backdrop-blur-xl transition-all duration-300",
         darkMode
-          ? "border-white/10 bg-zinc-950/82 shadow-black/45"
-          : "border-white/45 bg-white/88 shadow-slate-900/15"
+          ? "border-white/16 bg-[#1d0b17]/72 shadow-black/45"
+          : "border-white/55 bg-white/78 shadow-slate-900/15"
       )}
     >
       <header
         className={cn(
-          "grid grid-cols-6 items-center gap-3 border-b px-4 py-3",
-          darkMode ? "border-white/10" : "border-slate-900/10"
+          "grid grid-cols-6 items-center gap-3 border-b px-4 py-3 backdrop-blur-xl",
+          darkMode
+            ? "border-white/10 bg-white/[0.035]"
+            : "border-slate-900/10 bg-white/45"
         )}
       >
         <div className="flex gap-1.5">
-          <div className="h-3 w-3 rounded-full bg-rose-500 shadow-sm"></div>
-          <div className="h-3 w-3 rounded-full bg-amber-400 shadow-sm"></div>
-          <div className="h-3 w-3 rounded-full bg-emerald-400 shadow-sm"></div>
+          <div className="h-3 w-3 rounded-full bg-[#ff5f57] shadow-[0_0_10px_rgb(255_95_87_/_0.35)]"></div>
+          <div className="h-3 w-3 rounded-full bg-[#ffbd2e] shadow-[0_0_10px_rgb(255_189_46_/_0.3)]"></div>
+          <div className="h-3 w-3 rounded-full bg-[#28c840] shadow-[0_0_10px_rgb(40_200_64_/_0.3)]"></div>
         </div>
         <div className="col-span-4 flex justify-center">
           <input
@@ -106,7 +108,7 @@ export default function CodeEditor() {
         className={cn(
           "px-4 pb-4 pt-4",
           darkMode
-            ? "brightness-110"
+            ? "brightness-110 drop-shadow-[0_1px_0_rgb(255_255_255_/_0.03)]"
             : "text-gray-800 brightness-50 saturate-200 contrast-200"
         )}
       >

@@ -10,7 +10,16 @@ import { Resizable } from "re-resizable";
 import ThemeSelect from "@/components/controls/ThemeSelect";
 import LanguageSelect from "@/components/controls/LanguageSelect";
 import { ResetIcon } from "@radix-ui/react-icons";
-import { ArrowDown, Github, Sparkles, Wand2, Zap } from "lucide-react";
+import {
+  ArrowDown,
+  BatteryMedium,
+  Command,
+  Github,
+  Sparkles,
+  Wand2,
+  Wifi,
+  Zap,
+} from "lucide-react";
 import FontSelect from "@/components/controls/FontSelect";
 import FontSizeInput from "@/components/controls/FontSizeInput";
 import PaddingSlider from "@/components/controls/PaddingSlider";
@@ -49,7 +58,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="dark min-h-screen overflow-x-hidden bg-[linear-gradient(180deg,#08090d_0%,#101218_48%,#0b0d11_100%)] text-white">
+    <main className="desktop-wallpaper dark relative min-h-screen overflow-x-hidden text-white">
       <link
         rel="stylesheet"
         href={themes[theme as keyof typeof themes]?.theme}
@@ -61,26 +70,38 @@ export default function Home() {
         crossOrigin="anonymous"
       />
 
-      <header className="sticky top-0 z-40 border-b border-white/10 bg-zinc-950/75 backdrop-blur-xl">
+      <header className="sticky top-0 z-40 border-b border-white/10 bg-black/18 backdrop-blur-2xl">
         <nav
-          className="container flex h-16 min-w-0 items-center justify-between gap-3"
+          className="container flex h-12 min-w-0 items-center justify-between gap-3"
           aria-label="Primary navigation"
         >
           <a href="/" className="flex min-w-0 items-center gap-3">
-            <span className="grid size-9 place-items-center rounded-lg border border-white/10 bg-white/[0.06] shadow-lg shadow-black/20">
+            <span className="glass-control grid size-8 place-items-center rounded-lg">
               <Sparkles className="size-4 text-cyan-300" aria-hidden="true" />
             </span>
             <span>
-              <span className="block text-base font-semibold tracking-tight">
+              <span className="block text-sm font-semibold tracking-tight">
                 Snippix
               </span>
               <span className="hidden text-xs text-muted-foreground sm:block">
-                Code shots in seconds
+                Glass Studio
               </span>
             </span>
           </a>
 
-          <div className="flex shrink-0 items-center gap-2">
+          <div className="hidden items-center gap-4 text-xs font-medium text-zinc-300 md:flex">
+            <span>File</span>
+            <span>Edit</span>
+            <span>Export</span>
+            <span>Window</span>
+          </div>
+
+          <div className="flex shrink-0 items-center gap-2 text-muted-foreground">
+            <div className="hidden items-center gap-2 rounded-lg border border-white/10 bg-white/[0.055] px-2.5 py-1 text-xs backdrop-blur-xl sm:flex">
+              <Wifi className="size-3.5" aria-hidden="true" />
+              <BatteryMedium className="size-3.5" aria-hidden="true" />
+              <span>Ready</span>
+            </div>
             <Button
               variant="ghost"
               size="sm"
@@ -91,7 +112,7 @@ export default function Home() {
             </Button>
             <Button variant="outline" size="sm" asChild>
               <a
-                href="https://github.com/zayeefzahid"
+                href="https://github.com/zayeefzahid/snippix"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -103,19 +124,19 @@ export default function Home() {
         </nav>
       </header>
 
-      <section className="container grid min-h-[calc(100vh-4rem)] min-w-0 items-center gap-8 py-8 lg:grid-cols-[0.82fr_1.18fr] lg:py-12">
+      <section className="container relative z-10 grid min-h-[calc(100vh-3rem)] min-w-0 items-center gap-8 py-8 lg:grid-cols-[0.82fr_1.18fr] lg:py-12">
         <div className="min-w-0 max-w-[22rem] sm:max-w-2xl">
-          <div className="mb-5 inline-flex w-full max-w-[22rem] items-start gap-2 rounded-lg border border-white/10 bg-white/[0.05] px-3 py-1.5 text-sm leading-6 text-zinc-300 sm:w-auto sm:max-w-full">
+          <div className="glass-control mb-5 inline-flex w-full max-w-[22rem] items-start gap-2 rounded-lg px-3 py-1.5 text-sm leading-6 text-zinc-200 sm:w-auto sm:max-w-full">
             <Zap
               className="mt-1 size-4 shrink-0 text-amber-300"
               aria-hidden="true"
             />
-            <span>Export polished code images without leaving the page</span>
+            <span>Native-feeling captures for snippets worth sharing</span>
           </div>
-          <h1 className="text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-6xl">
+          <h1 className="text-4xl font-semibold tracking-tight text-white drop-shadow-[0_1px_22px_rgb(255_255_255_/_0.12)] sm:text-5xl lg:text-6xl">
             Snippix
           </h1>
-          <p className="mt-5 max-w-[22rem] text-base leading-7 text-zinc-300 sm:max-w-xl sm:text-lg">
+          <p className="mt-5 max-w-[22rem] text-base leading-7 text-zinc-200/86 sm:max-w-xl sm:text-lg">
             Turn snippets into sharp, shareable visuals with editable titles,
             themes, typography, padding, and one-click exports.
           </p>
@@ -134,15 +155,15 @@ export default function Home() {
             </Button>
           </div>
           <dl className="mt-8 grid max-w-[22rem] grid-cols-1 gap-3 text-sm sm:max-w-xl sm:grid-cols-3">
-            <div className="rounded-lg border border-white/10 bg-white/[0.04] p-3">
+            <div className="glass-control rounded-lg p-3">
               <dt className="text-muted-foreground">Themes</dt>
               <dd className="mt-1 font-semibold text-white">10 presets</dd>
             </div>
-            <div className="rounded-lg border border-white/10 bg-white/[0.04] p-3">
+            <div className="glass-control rounded-lg p-3">
               <dt className="text-muted-foreground">Formats</dt>
               <dd className="mt-1 font-semibold text-white">PNG + SVG</dd>
             </div>
-            <div className="rounded-lg border border-white/10 bg-white/[0.04] p-3">
+            <div className="glass-control rounded-lg p-3">
               <dt className="text-muted-foreground">Sharing</dt>
               <dd className="mt-1 font-semibold text-white">Copy link</dd>
             </div>
@@ -152,26 +173,49 @@ export default function Home() {
         <section
           id="composer"
           aria-label="Snippet composer preview"
-          className="w-full min-w-0 max-w-[22rem] rounded-lg border border-white/10 bg-white/[0.04] p-3 shadow-2xl shadow-black/30 backdrop-blur sm:max-w-full sm:p-4"
+          className="glass-panel w-full min-w-0 max-w-[22rem] rounded-lg p-3 sm:max-w-full sm:p-4"
         >
-          <div className="mb-3 flex flex-col gap-3 border-b border-white/10 pb-3 sm:flex-row sm:items-center sm:justify-between">
-            <div>
-              <p className="text-sm font-medium text-white">Live preview</p>
-              <p className="text-xs text-muted-foreground">
-                Drag the left or right edge to resize the export.
-              </p>
+          <div className="mb-3 flex flex-col gap-3 border-b border-white/12 pb-3 sm:flex-row sm:items-center sm:justify-between">
+            <div className="flex items-center gap-3">
+              <div className="flex gap-1.5" aria-hidden="true">
+                <span className="size-3 rounded-full bg-[#ff5f57] shadow-[0_0_14px_rgb(255_95_87_/_0.45)]" />
+                <span className="size-3 rounded-full bg-[#ffbd2e] shadow-[0_0_14px_rgb(255_189_46_/_0.35)]" />
+                <span className="size-3 rounded-full bg-[#28c840] shadow-[0_0_14px_rgb(40_200_64_/_0.35)]" />
+              </div>
+              <div>
+                <p className="text-sm font-medium text-white">Capture Studio</p>
+                <p className="text-xs text-muted-foreground">
+                  Drag the left or right edge to resize the export.
+                </p>
+              </div>
             </div>
             <div className="flex items-center gap-2 text-xs text-muted-foreground">
-              <span className="rounded-md border border-white/10 px-2 py-1">
-                2x export
+              <span className="glass-control rounded-md px-2 py-1">
+                <Command className="mr-1 inline size-3" aria-hidden="true" />
+                PNG
               </span>
-              <span className="rounded-md border border-white/10 px-2 py-1">
+              <span className="glass-control rounded-md px-2 py-1">
                 Auto language
               </span>
             </div>
           </div>
 
-          <div className="flex min-h-[420px] w-full items-center justify-start overflow-auto rounded-lg border border-white/10 bg-zinc-950/70 p-3 sm:justify-center sm:p-5">
+          <div className="mb-3 grid grid-cols-3 gap-2 text-xs text-muted-foreground">
+            <div className="glass-control rounded-lg px-3 py-2">
+              <span className="block text-white">Material</span>
+              <span>Glass</span>
+            </div>
+            <div className="glass-control rounded-lg px-3 py-2">
+              <span className="block text-white">Canvas</span>
+              <span>Retina 2x</span>
+            </div>
+            <div className="glass-control rounded-lg px-3 py-2">
+              <span className="block text-white">Share</span>
+              <span>Linkable</span>
+            </div>
+          </div>
+
+          <div className="flex min-h-[420px] w-full items-center justify-start overflow-auto rounded-lg border border-white/12 bg-[linear-gradient(145deg,rgb(255_255_255_/_0.075),rgb(255_255_255_/_0.025)_36%,rgb(0_0_0_/_0.12))] p-3 shadow-inner shadow-black/25 backdrop-blur-xl sm:justify-center sm:p-5">
             <Resizable
               className="max-w-full"
               enable={{ left: true, right: true }}
@@ -218,10 +262,10 @@ export default function Home() {
 
       <section
         id="controls"
-        className="border-y border-white/10 bg-black/20 py-6"
+        className="relative z-10 border-y border-white/10 bg-black/10 py-6 backdrop-blur-xl"
       >
         <div className="container">
-          <Card className="border-white/10 bg-zinc-950/75 shadow-2xl shadow-black/20 backdrop-blur">
+          <Card className="glass-panel rounded-lg py-0">
             <CardContent className="grid gap-5 p-5 sm:grid-cols-2 lg:grid-cols-[repeat(3,minmax(0,1fr))_auto_auto] xl:grid-cols-[repeat(7,max-content)] xl:items-end">
               <ThemeSelect />
               <LanguageSelect />
@@ -242,15 +286,26 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="container flex flex-col gap-3 py-6 text-sm text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
-        <p>Made by Zayeef Zahid.</p>
+      <footer className="container relative z-10 flex flex-col gap-3 py-6 text-sm text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
+        <p>
+          Made by{" "}
+          <a
+            href="https://zayeef.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-md text-cyan-200 underline-offset-4 transition-colors hover:text-white hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/70"
+          >
+            Zayeef Zahid
+          </a>
+          .
+        </p>
         <a
-          href="https://github.com/zayeefzahid"
+          href="https://github.com/zayeefzahid/snippix"
           target="_blank"
           rel="noopener noreferrer"
-          className="w-fit rounded-md text-cyan-300 underline-offset-4 transition-colors hover:text-cyan-200 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/70"
+          className="w-fit rounded-md text-cyan-200 underline-offset-4 transition-colors hover:text-white hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/70"
         >
-          View more work
+          View GitHub repo
         </a>
       </footer>
     </main>

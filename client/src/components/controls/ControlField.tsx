@@ -22,7 +22,7 @@ export default function ControlField({
           {label}
         </label>
         {value ? (
-          <span className="rounded-md border border-white/10 bg-white/5 px-1.5 py-0.5 text-[0.65rem] font-medium text-muted-foreground">
+          <span className="glass-control rounded-md px-1.5 py-0.5 text-[0.65rem] font-medium text-muted-foreground">
             {value}
           </span>
         ) : null}
