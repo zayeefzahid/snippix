@@ -10,7 +10,7 @@ export default function BackgroundSwitch() {
 
   return (
     <ControlField label="Background">
-      <div className="glass-control flex h-10 items-center rounded-lg px-3">
+      <div className="premium-control flex h-10 items-center rounded-lg px-3">
         <Switch checked={showBackground} onCheckedChange={setShowBackground} />
         <span className="ml-3 text-sm text-muted-foreground">
           {showBackground ? "Visible" : "Off"}

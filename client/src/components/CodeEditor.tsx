@@ -64,18 +64,18 @@ export default function CodeEditor() {
   return (
     <div
       className={cn(
-        "overflow-hidden rounded-lg border shadow-2xl backdrop-blur-xl transition-all duration-300",
+        "overflow-hidden rounded-lg border shadow-2xl transition-all duration-300",
         darkMode
-          ? "border-white/16 bg-[#1d0b17]/72 shadow-black/45"
-          : "border-white/55 bg-white/78 shadow-slate-900/15"
+          ? "border-white/12 bg-[#180815]/88 shadow-black/45"
+          : "border-white/55 bg-white/92 shadow-slate-900/15"
       )}
     >
       <header
         className={cn(
-          "grid grid-cols-6 items-center gap-3 border-b px-4 py-3 backdrop-blur-xl",
+          "grid grid-cols-6 items-center gap-3 border-b px-4 py-3",
           darkMode
-            ? "border-white/10 bg-white/[0.035]"
-            : "border-slate-900/10 bg-white/45"
+            ? "border-white/10 bg-white/[0.03]"
+            : "border-slate-900/10 bg-white/70"
         )}
       >
         <div className="flex gap-1.5">
