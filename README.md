@@ -223,7 +223,7 @@ type Snippet = {
 ## `> screenshots`
 
 <p align="center">
-  <img src="./preview.png" alt="Snippix preview" width="900" />
+  <img src="./snippix-ensemble-mockup.png" alt="Snippix preview" width="900" />
 </p>
 
 <p align="center">
