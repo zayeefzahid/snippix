@@ -18,7 +18,7 @@
 ## 🎥 Demo
 
 <p align="center">
-  <img src="./preview.png" alt="Snippix demo" width="900"/>
+  <img src="./snippix-ensemble-mockup.png" alt="Snippix demo" width="900"/>
 </p>
 
 ---
